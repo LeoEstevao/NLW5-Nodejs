@@ -1,4 +1,5 @@
 import express from 'express';
+import './database/index';
 
 const app = express();
 
