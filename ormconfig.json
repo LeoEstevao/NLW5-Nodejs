@@ -6,7 +6,7 @@
     "username": "root",
     "password": "1234",
     "entities": [
-        "./src/database/entities/**.ts"
+        "./src/entities/**.ts"
     ],
     "migrations": [
         "./src/database/migrations/**.ts"
