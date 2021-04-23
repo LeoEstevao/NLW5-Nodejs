@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 
 import { v4 as uuid } from 'uuid';
 
@@ -14,7 +14,7 @@ class Setting {
     @Column()
     chat: boolean;
 
-    @CreateDateColumn()
+    @UpdateDateColumn()
     update_at: Date;
     
     @CreateDateColumn()
