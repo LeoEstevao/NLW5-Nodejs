@@ -1,8 +1,9 @@
 
-import { Column, CreateDateColumn, JoinColumn, ManyToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 import { User } from './User';
 
+@Entity('connections')
 class Connection {
     @PrimaryColumn()
     id: string;
@@ -24,7 +25,7 @@ class Connection {
     created_at: Date;
 
     @UpdateDateColumn()
-    update_at: Date;
+    updated_at: Date;
 
     constructor() {
         if(!this.id) {

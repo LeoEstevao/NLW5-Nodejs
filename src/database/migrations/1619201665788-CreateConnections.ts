@@ -16,7 +16,8 @@ export class CreateConnections1619201665788 implements MigrationInterface {
                     {
                         name: 'admin_id',
                         type: 'varchar',
-                        generationStrategy: 'uuid'
+                        generationStrategy: 'uuid',
+                        isNullable: true
                     },
                     {
                         name: 'user_id',
