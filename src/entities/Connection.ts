@@ -1,5 +1,5 @@
 
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 import { User } from './User';
 
@@ -15,7 +15,7 @@ class Connection {
     socket_id: string;
 
     @JoinColumn({ name: 'user_id' })
-    @ManyToMany(() => User)
+    @ManyToOne(() => User)
     user: User;
 
     @Column()
